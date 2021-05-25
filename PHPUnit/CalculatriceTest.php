@@ -9,27 +9,19 @@ use PHPUnit\Framework\TestCase;
 class CalculatriceTest extends TestCase {
 
     public function testAdditionner() {
-        $calc = new Calculatrice();
-        $result = $calc->addition(15, 25);
-        $this->assertEquals(40, $result);
+        $this->assertEquals(40, Calculatrice::addition(30,10));
     }
 
     public function testSoustraction() {
-        $calc = new Calculatrice();
-        $result = $calc->soustraction(20, 5);
-        $this->assertEquals(15, $result);
+        $this->assertEquals(20, Calculatrice::soustraction(30,10));
     }
 
     public function testMultiplication() {
-        $calc = new Calculatrice();
-        $result = $calc->multi(5, 25);
-        $this->assertEquals(125, $result);
+        $this->assertEquals(300, Calculatrice::multi(30,10));
     }
 
     public function testDivision() {
-        $calc = new Calculatrice();
-        $result = $calc->divi(25, 5);
-        $this->assertEquals(5, $result);
+        $this->assertEquals(3, Calculatrice::divi(30,10));
     }
 
 }
